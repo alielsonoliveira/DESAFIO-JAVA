@@ -1,0 +1,23 @@
+// Para ler e escrever dados em Java, aqui na DIO padronizamos da seguinte forma: 
+// - new Scanner(System.in): cria um leitor de Entradas, com métodos úteis com prefixo "next";
+// - System.out.println:.imprime um texto de Saída (Output) e pulando uma linha.  
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        double h = 0;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        for (int i = 1; i <= n; i++) {
+          //por causa que é double tem que colocar 1.0 e somar com h
+            h += 1.0 / i;
+        }
+// Como os valos são pre-definidos, ele não aceita imprimir valor acima de dois, da erro, o valor exado é 2.75
+// no print coloca "%.0f%n" que vai imprimir apenas o numero inteiro.
+        System.out.printf("%.0f%n", h);
+    }
+}
